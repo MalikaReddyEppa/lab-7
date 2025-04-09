@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Crafter Game</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Story Crafter Game</h1>
+    </header>
+    <main>
+        <form action="/create-story" method="post">
+            <!-- Updated order and reduced number of inputs -->
+            <label for="noun1">Singular Noun (e.g., cat):</label>
+            <input type="text" id="noun1" name="noun1" required>
+        
+            <label for="adj1">Adjective (e.g., beautiful):</label>
+            <input type="text" id="adj1" name="adj1" required>
+        
+            <label for="verb1">Verb (past tense) (e.g., ran):</label>
+            <input type="text" id="verb1" name="verb1" required>
+        
+            <label for="adverb">Adverb (e.g., quickly):</label>
+            <input type="text" id="adverb" name="adverb" required>
+        
+            <label for="noun2">Plural Noun (e.g., dogs):</label>
+            <input type="text" id="noun2" name="noun2" required>
+        
+            <label for="verb2">Verb (e.g., jump):</label>
+            <input type="text" id="verb2" name="verb2" required>
+        
+            <button type="submit">Generate Story</button>
+        </form>
+    </main>
+    
+    <section class="info-section">
+        <h4>Project Addendum:</h4>
+        <p>
+            In this project, I created a web server using <strong>Express.js</strong> to generate a simple Mad Libs story. Here's a breakdown of my process:
+        </p>
+        <ul>
+            <li><strong>Form Structure:</strong> The user is now asked to provide a singular noun, adjective, verb (past tense), adverb, plural noun, and verb for the story generation.</li>
+            <li><strong>Routing:</strong> The server uses two routes: one to show the form and another to handle form submissions and generate the Mad Lib story.</li>
+            <li><strong>Story Generation:</strong> The server dynamically inserts the user input into a predefined story template, providing a unique, fun story for each submission.</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Last updated: <span id="modified"></span></p>
+    </footer>
+    <script type="text/javascript">
+        document.getElementById('modified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
