@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const app = express();
-const PORT = 8080; // Use 8080 as requested
+const PORT = 8081; // Use 8080 as requested
 
 // Middleware setup
 app.use(express.urlencoded({ extended: true }));
@@ -10,11 +10,11 @@ app.use(express.json());
 app.use(logger('dev')); // Logging requests
 
 // Serve general static files from 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 
 // Serve lab-4 and lab-7 explicitly
-app.use('/itc505/lab-4', express.static(path.join(__dirname, 'public', 'ITC505', 'lab-4')));
-app.use('/itc505/lab-7', express.static(path.join(__dirname, 'public', 'ITC505', 'lab-7')));
+app.use('/itc505/lab-4', express.static(path.join(__dirname,  'ITC505', 'lab-4')));
+app.use('/itc505/lab-7', express.static(path.join(__dirname,  'ITC505', 'lab-7')));
 
 // Redirect root path to lab-7 as default, if needed
 app.get('/', (req, res) => {
