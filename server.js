@@ -18,7 +18,7 @@ app.use('/ITC505/lab-7', express.static(path.join(__dirname,  'ITC505', 'lab-7')
 
 // Redirect root path to lab-7 as default, if needed
 app.get('/', (req, res) => {
-    res.redirect('/itc505/lab-7');
+    res.redirect('/ITC505/lab-7');
 });
 
 // Handle form submission for a mad lib story
