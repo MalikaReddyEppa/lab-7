@@ -13,8 +13,8 @@ app.use(logger('dev')); // Logging requests
 app.use(express.static(path.join(__dirname)));
 
 // Serve lab-4 and lab-7 explicitly
-app.use('/itc505/lab-4', express.static(path.join(__dirname,  'ITC505', 'lab-4')));
-app.use('/itc505/lab-7', express.static(path.join(__dirname,  'ITC505', 'lab-7')));
+app.use('/ITC505/lab-4', express.static(path.join(__dirname,  'ITC505', 'lab-4')));
+app.use('/ITC505/lab-7', express.static(path.join(__dirname,  'ITC505', 'lab-7')));
 
 // Redirect root path to lab-7 as default, if needed
 app.get('/', (req, res) => {
